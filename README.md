@@ -103,16 +103,10 @@ To run unit tests for the browser, run:
 npm run browserut
 ```
 
-## Future work
+## Future of Azure Mobile Apps
+ 
+Microsoft is committed to fully supporting Azure Mobile Apps, including **support for the latest OS release, bug fixes, documentation improvements, and community PR reviews**. Please note that the product team is **not currently investing in any new feature work** for Azure Mobile Apps. We highly appreciate community contributions to all areas of Azure Mobile Apps. 
 
-Brief list of work planned in the future:
-- ability to cancel push and pull operations
-- triggering a push automatically when a pull is performed
-- support for math and date/time functions while querying for records
-- callback to allow changing how records are sent to the server during a push
-- configurable ID column. Currently ID column has to be named 'id'.
-
-All these will be added over a series of updates in the next few days. Stay tuned!
 
 ## Useful Resources
 
