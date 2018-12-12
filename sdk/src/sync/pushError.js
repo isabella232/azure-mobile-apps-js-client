@@ -429,8 +429,14 @@ function createPushError(store, operationTableManager, storeTaskRunner, pushOper
 }
 
 function makeCopy(value) {
+    const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$/;
     if (!_.isNull(value)) {
-        value = JSON.parse( JSON.stringify(value) );
+        value = JSON.parse(JSON.stringify(value), function(key, value) {
+            if (typeof value === "string" && dateFormat.test(value)) {
+                return new Date(value);
+            }
+            return value;
+        });
     }
     return value;
 }
